@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Message board</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <header>
+      <h1>Message board</h1>
+    </header>
+    <main>
+      <div class="messages">
+        <% messages.map(message => { %>
+          <div class="messages_message">
+            <h2 class="messages_message_user"><%= message.user %></h2>
+            <p class="messages_message_content"><%= message.text %></p>
+            <p class="messages_message_date"><%= message.added %></p>
+          </div>
+        <% }) %>
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>
