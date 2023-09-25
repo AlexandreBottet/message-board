@@ -1,0 +1,19 @@
+<%- include('partials/header'); -%>
+
+<body>
+    <form class="form-message" method="POST" action="/new">
+        <h2 class="form-message_title">Add a new message</h2>
+        <div class="form-message_content">
+            <label class="form-message_content_label" for="name">Name:</label>
+            <input class="form-message_content_input" type="text" name="name" id="name" required />
+        </div>
+        <div class="form-message_content">
+            <label class="form-message_content_label" for="message">Message:</label>
+            <input class="form-message_content_input" type="text" name="message" id="message" required />
+        </div>
+        <div class="form-message_submission">
+            <input class="form-message_submission_button" type="submit" value="Submit" />
+        </div>
+    </form>
+</body>
+</html>

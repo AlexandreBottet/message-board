@@ -19,4 +19,17 @@ router.get('/', function(req, res, next) {
   res.render('index', { messages });
 });
 
+router.get('/new', function(req, res, next) {
+  res.render('form');
+})
+
+router.post('/new', function(req, res, next) {
+  const { name, message } = req.body;
+
+  messages.push({ text: message, user: name, added: new Date() });
+
+  res.redirect(303, '/');
+})
+
 export default router;
+
